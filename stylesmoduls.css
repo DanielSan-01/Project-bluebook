@@ -1,0 +1,103 @@
+
+/*progressbar*/
+.progressbar {
+    padding-right: 10px;
+    font-size: 1rem;
+  }
+/*cards*/
+  .cards {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100vw;
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /**/
+    border: 1px solid #2a5aa5;/**/
+    max-width: 350px;
+    margin: 10px auto;
+    text-align: center;
+    font-family: sans-serif;
+    position: relative; /*To make whole card a link*/
+  }
+  .card h2, .card p { 
+    padding: 0 10px; 
+  }
+  
+  .card img {
+    width: 100%;
+  }
+  
+  .price {
+    color: #2a5aa5;
+    font-size: 1.5rem;
+  }
+  
+  .card a {
+    display: block;
+    border: none;
+    padding: 12px;
+    color: white;
+    background-color: #2a5aa5;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .card a:hover {
+    opacity: 0.7;
+  }
+  
+  /*Make the whole card a link*/
+  .card a::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+  }
+  
+  h2 { 
+    text-align: center; 
+  }
+
+  iframe {
+    height: 200px;
+    margin-bottom: 24px;
+    width: 100%;
+  }
+
+  abbr {
+    font-style: italic;
+    color: chocolate;
+    /*text-decoration: none; 
+    border-bottom: 1px dotted chocolate;/**/
+  }  
+
+
+
+
+
+
+  
+  @media (min-width: 640px) {
+    .cards {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+    }
+    .card {
+      margin: 10px;
+      display: flex; /* Place a on bottom */
+      flex-direction: column;
+    }
+    .card > * {
+      flex-grow: 0; /* Place a on bottom */
+    }
+    .card > p.info {
+      flex-grow: 1; /* Place a on bottom, by expanding info */
+    }
+  }
+
